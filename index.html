@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>nia cantik</h2>
+      </div>
+      <div class="menu-header">
+        <h5>Menu</h5>
+        <ul>
+          <li><a href="#"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+          <li><a href="#"><i class="fas fa-box"></i> Products</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+      </div>
+      <div class="business-header">
+        <h5>Business</h5>
+        <ul>
+          <li><a href="#"><i class="fas fa-shipping-fast"></i> Shipment</a></li>
+          <li><a href="#"><i class="fas fa-user-tie"></i> Employee</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <p><strong>Nia cantik </strong></p>
+        <p>solusi bisnis biar ga dikorupsi.</p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." class="search-input">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+      <div class="overview-section">
+        <h5><strong>Overview</strong></h5>
+        <div class="card-container">
+          <div class="card">
+            <div class="icon">
+              <i class="fas fa-shopping-basket"></i>
+            </div>
+            <div class="percentage positive">
+              +10%
+            </div>
+            <div class="amount">
+              $90,340.00
+            </div>
+            <div class="label">
+              Total
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="percentage negative">
+              -32%
+            </div>
+            <div class="amount">
+              $7,340.00
+            </div>
+            <div class="label">
+              Total Expenses
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="percentage positive">
+              +48%
+            </div>
+            <div class="amount">
+              18,340.00
+            </div>
+            <div class="label">
+              Total Visitors
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="percentage negative">
+              -12%
+            </div>
+            <div class="amount">
+              11,340.00
+            </div>
+            <div class="label">
+              Total Orders
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-section">
+          <h5><strong>Income vs Expense</strong></h5>
+          <canvas id="incomeExpenseChart" width="300" height="75"></canvas>
+        </div>
+      </div>
+
+      <div class="products-section">
+        <h5><strong>Popular Products</strong></h5>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Photos</th>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Category</th>
+              <th>Brand</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://via.placeholder.com/50" alt="blush on"></td>
+              <td>blush on</td>
+              <td>feb 10, 2024</td>
+              <td>Technic</td>
+              <td>lauiz</td>
+              <td>$99.89</td>
+              <td>soldout</td>
+            </tr>
+            <tr>
+              <td><img src="https://via.placeholder.com/50" alt="Lipstik"></td>
+              <td>lipstik</td>
+              <td>jan 13, 2024</td>
+              <td>Technic</td>
+              <td>lauiz</td>
+              <td>$99.89</td>
+              <td>soldout</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+      <div class="icon-container">
+        <div class="icon-circle">
+          <i class="fas fa-bell"></i> <!-- Menggunakan kelas Font Awesome yang benar -->
+          <span class="notification-dot"></span>
+        </div>
+        <div class="icon-circle">
+          <i class="fas fa-pencil-alt"></i> <!-- Menggunakan kelas Font Awesome yang benar -->
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="user-logo">
+          <div class="logo-circle">
+            <i class="icon-placeholder"></i>
+          </div>
+          <h3>nia cantik</h3>
+        </div>
+        <div class="user-stats">
+          <div class="stat-item">
+            <strong>unlimited</strong>
+            <p>Produk</p>
+          </div>
+          <div class="stat-item">
+            <strong>1.000.000</strong>
+            <p>Followers</p>
+          </div>
+        </div>
+        <div class="reputation">
+          <h5>Reputation</h5>
+          <div class="reputation-bar">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 78%;" aria-valuenow="78" aria-valuemin="0"
+                aria-valuemax="100"></div>
+            </div>
+            <span>respon chat 90%</span>
+          </div>
+        </div>
+        <div class="recent-orders">
+          <h5>Recent Orders <a href="#">See All</a></h5>
+          <ul>
+            <li>
+              <div class="order-info">
+                <img src="watch.png" alt="Watch">
+                <span>lipstik lauiz 101x</span>
+              </div>
+              <div class="order-amount">
+                <strong>+$200.00</strong>
+                <span>2 Minutes Ago</span>
+              </div>
+            </li>
+            <li>
+              <div class="order-info">
+                <img src="macbook.png" alt="Macbook">
+                <span>facemist 90x</span>
+              </div>
+              <div class="order-amount">
+                <strong>+$445.00</strong>
+                <span>6 Minutes Ago</span>
+              </div>
+            </li>
+            <li>
+              <div class="order-info">
+                <img src="iphone.png" alt="iPhone 13">
+                <span>blush on 67x</span>
+              </div>
+              <div class="order-amount">
+                <strong>+$4567.00</strong>
+                <span>2 Minutes Ago</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
